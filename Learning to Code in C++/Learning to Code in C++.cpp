@@ -119,7 +119,7 @@ int main(){
 	Sleep(900), flag_test(); //calls my flag variable function
 
 	Sleep(900), variable_test(), Sleep(900); //calls my "hello" variable function from my variable tab.cpp file
-	 
+	
 	std::cout << std::endl << "Get ready for the program to end in:" << std::endl, Sleep(500);
 	std::cout << "3, " , Sleep(800) , std::cout << "2, " , Sleep(800) , std::cout << "1" , Sleep(400);
 	return(0);

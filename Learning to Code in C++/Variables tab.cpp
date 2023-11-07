@@ -17,9 +17,3 @@ void flag_test() {
 	std::cout << "flag = " << my_flag << std::endl; //output shows that flag = 0 (0=false, flag equalling anything is false as there's no assigned value)
 }
 
-void variable_test(){
-		std::cout << std::endl << "Here's an int list test for you!" << std::endl; //test hello world, seeing if i can get seperate files called and debugged following my main functions
-		std::cin.get(); //ask someone to explain this function again to me
-		for (int numbers = 0; numbers < 10; numbers++) //number = name i have given this function this loop is essentially a function)
-			{std::cout << numbers << std::endl;} //std::endl prints each number in the sequence on a new line
-	}
