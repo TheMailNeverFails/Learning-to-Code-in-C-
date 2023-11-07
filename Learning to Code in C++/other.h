@@ -1,0 +1,1 @@
+void MyFunc(); //a header tool made with the help of https://stackoverflow.com/questions/6995572/using-multiple-cpp-files-in-c-program
