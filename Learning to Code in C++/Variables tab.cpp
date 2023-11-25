@@ -10,19 +10,25 @@ wtf is a scope?? */
 void flag_test() {
 	bool my_flag; //Variable names have rule so make sure you know about these rules on cpp sites (tldr: variable names can't START with numbers, but may contain letters, numbers and certain symbold like hyphens and underscores, and cannot be the same as any keyword in the language like in or return
 	a = 7;
-	my_flag = false;
-	std::cout << std::endl << "Here are your flag values:" << std::endl;
-	std::cout << "a = " << a << std::endl;
-	std::cout << "b = " << b << std::endl;
-	std::cout << "flag = " << my_flag << std::endl; //output shows that flag = 0 (0=false, flag equalling anything is false as there's no assigned value)
+	my_flag = false; 
+	cout << endl << "Here are your flag values:" << endl;
+	cout << "a = " << a << endl;
+	cout << "b = " << b << endl;
+	cout << "flag(false) = " << my_flag << endl; //output shows that flag = 0 (0=false, flag equalling anything is false as there's no assigned value)
+	
+	my_flag = true;
+	cout << endl << "a + b = " << a + b << endl;
+	cout << "b - a = " << b - a << endl;
+	cout << "flag(true) = " << my_flag << endl;
+
+	unsigned int positive; //this is an unsigned variable which stores a negative number making declarations anywhere in the code and not just at the beginning of a scope is a nice feature of  c++ which hasbn't always been supported in the history of C
+	positive = b - a;
+	cout << endl << "b - a (unsigned) = " << positive << endl; //the printed string is the number 4294967294 which is 2 raised to the 32nd power -2 (this is the two's complement representation of -2 in binary. Because it is unsigned the intepretation is different, this is why you have to be careful when you decide whether you want to use signed or unsigned integers
 }
 
 void variable_test() {
-	std::cout << std::endl << "Here's an int list test for you!" << std::endl; //test hello world, seeing if i can get seperate files called and debugged following my main functions
-	std::cin.get(); //ask someone to explain this function again to me
-	for (int numbers = 0; numbers < 10; numbers++) //number = name i have given this function this loop is essentially a function)
-	{
-		std::cout << numbers << std::endl;
-	} //std::endl prints each number in the sequence on a new line
+	cout << endl << "Here's an int list test for you!" << endl;	//test hello world, seeing if i can get seperate files called and debugged following my main functions
+	cin.get();													//ask someone to explain this function again to me
+	for (int numbers = 0; numbers < 10; numbers++)				//number = name i have given this function this loop is essentially a function)
+	cout << numbers << endl;									//endl prints each number in the sequence on a new line
 }
-
