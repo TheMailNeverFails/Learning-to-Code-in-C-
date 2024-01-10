@@ -105,10 +105,12 @@
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <AdditionalIncludeDirectories>C:\Users\User\source\repos\Learning to Code in C++;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalUsingDirectories>C:\Users\thedo\Documents\GitHub\Learning-to-Code-in-C-</AdditionalUsingDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>C:\Users\thedo\Documents\GitHub\Learning-to-Code-in-C-</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -128,6 +130,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="..\Arrays.cpp" />
+    <ClCompile Include="..\Averages chalenge.cpp" />
+    <ClCompile Include="..\Calculation.cpp" />
+    <ClCompile Include="..\Preprocessor_Directives_File.cpp" />
+    <ClCompile Include="..\Strings.cpp" />
+    <ClCompile Include="..\Type Casting.cpp" />
+    <ClCompile Include="..\Type inference with auto test.cpp" />
     <ClCompile Include="Learning to Code in C++.cpp" />
     <ClCompile Include="other.cpp" />
   </ItemGroup>
