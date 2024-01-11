@@ -1,1 +1,0 @@
-//Calculate an Average challenge

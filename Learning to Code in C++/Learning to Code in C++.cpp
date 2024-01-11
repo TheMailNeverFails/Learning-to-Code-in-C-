@@ -90,7 +90,7 @@ Data types:
 		the only catch is that you must initialise the variable at declaration
 
 
-Preprocessor Directives:
+Preprocessor Directives:#
 		(not really important to me personally as i do frontend dev)
 		c++ is a compiled language so the code goes through a pipeline of software toolws which extract the semantic elements written by the programmer (your code is preprocessed prior to compiling)
 		one of the first steps your code goes through is the preprocessor (not related to microprocessor)
@@ -98,41 +98,8 @@ Preprocessor Directives:
 		The compiler will receive a somewhat modified or rather preprocessed version of the code.
 		These directives like "include" "define" and "ifdef" are useful for libraries, constants, selecting code blocks e.c.t.
 
-Constants:
-		They are identifiers with Values that will not change during execution
-		They are useful as parameters in your code, for example the size of the screen or length of a memory buffer
-		They may be implemented with defined directives or as regular variables 
 
-		Constants as directives:
-		we may create constants with preprocessor directives, the "#define" directives schedules a find and replace operation so the code that is sent to the compiler has all the instances of the #define symbol replaced by its value
-		these defined symbols are known as Macros
-		example: define the number of rooms in a house using "#define ROOMS 4"
-		BE AWARE, The use of #define is discouraged and considered a bad practise, This is because macros don't have a context 
-		there's no compiler enforcement for basic features like types and syntax correctness for macros so if you mess up you won't have an easy fallback to find out what the issues were
 
-		The const Qualifier:
-		There's a better alternative, you can #define regular variables as constants using the const qualifier
-		This is used in a regular declaration
-		REMEMBER, declarations specify a type, so the compiler will notice any irregularities in the code related to the type
-		Also. Scope encapsulation is enforced, so the order is embedded into the language 
-		Warning, const qualifier is not the same in C and C++. (In C it only means that a variable cannot change, but it lacks most of the features implemented in C++)
-		^^ this is why macros are more common in C than C++
-
-Arrays:
-		Arrays are collections of data, each element is accessible by an index.
-		Elements are homogenous (of the same/alike) So you cannot have strings and integers in the same array 
-		Arrays are fixed in size, so you mahy not resize them (they are constant, and so cannot change)
-		Elements are contiguous in memory (the whole array is a sequential block of memory addressses)
-
-Strings:
-		They are not a type natively supported by the language (#include <string>) however it supports the same types of implementation 
-		in C strings are arrays of characters(char) a sequence of consecutive characters ending with the null character (0)
-		the string class "std::string" comes with the c++ standard library is a widely used model for strings with lots of useful functionas
-
-Type casting:
-			one of the most valuable elements of c++ which gives you virtually full control of the data you're working with Simply put, typecasting is specifying how to interpret a piece of data. 
-			It's useful for converting data types. For example, you may have a 32-bit integer, which you want to convert to a floating-point number. Remember that floats and integers have very different encodings. 
-			The syntax is simple, just type between parentheses the type you want followed by an expression which evaluates to the value to convert. 
 */
 
 using namespace std;
@@ -141,12 +108,8 @@ using namespace std;
 #include <string> //library for strings
 #include "other.h" //includes my header tool file 
 #include "Variables tab.cpp"//includes information setup in my variable tab file associated
-#include "Type inference with auto test.cpp" //includes information setup in my type inference file
-#include "Preprocessor_Directives_File.cpp" //includes information setup in my Preprocessor directive file
-#include "Arrays.cpp"  //includes information setup in my arrays file
-#include "Strings.cpp"
-#include "Type Casting.cpp"
-#include "Calculation.cpp"
+#include "Type inference with auto test.cpp"
+#include "Preprocessor_Directives_File.cpp"
 
 /// <summary>
 /// Inputs A + B
@@ -174,12 +137,12 @@ int main() {
 	string variable_login_name;
 	cout << endl << "Please enter your firstname, Marv:" << endl;
 	cin >> variable_login_name; //cin only works for single words if i want to use it for strings that contain space i have to use a special function (also Cin uses >> instead of <<)																																
-	if (variable_login_name == "Marv" || variable_login_name == "marv") { cout << "Hello again, Marv" << endl; } // || sign means "or", making sure spelling error still counts as the correct person
+	if (variable_login_name == "Marv") { cout << "Hello again, Marv" << endl; }
 	else { cout << "That is not your name, stupid" << endl; } //else {cout...} = if the output is anything other than the predetermined if string then it will print out the error message
 	//endl = end line (the next character output will print on the next line)
 
 	Sleep(700); /*I used the "Sleep()" function to slowly print my strings out*/  cout << endl << "Here's a list of Hello world tests:" << endl, cout << "Hello World!" << endl, cout << "Hello PC!" << endl, cout << "Hello Marv!" << endl; //Sleep delay taken from: https://stackoverflow.com/questions/27215705/how-to-delay-output-in-c
-	Sleep(9), cout << endl << "Here's some additions!" << endl;
+	Sleep(900), cout << endl << "Here's some additions!" << endl;
 	cout << addition(2, 3) << endl, cout << subtraction(5, 6) << endl;
 	/* a namespace is something that can help you group things.std is for standard use only.
 	The std namespace groups all the standard things: types like vector and string, algorithms like find, reduce, and even more.
@@ -189,25 +152,16 @@ int main() {
 	because int main is a function that returns an integer (number) we'll return 0 with the return keyword.
 	This code still runs without Return 0 but we put it in because traditionally 0 means no errors came up in the program*/
 
-	Sleep(9), cout << endl, Type_ID_testing(), Sleep(9); //calls my type id function
+	Sleep(900), cout << endl, Type_ID_testing(), Sleep(900); //calls my type id function
 
-	Sleep(9), cout << endl, Preprocessor_Directives(), Sleep(9);//Calls my from my preprocessor directive file project
+	Sleep(900), cout << endl, Preprocessor_Directives(), Sleep(900);//Calls my from my preprocessor directive file project
 
-	Sleep(9), flag_test(); //calls my flag variable function
+	Sleep(900), flag_test(); //calls my flag variable function
 
-	Sleep(9), variable_test(), Sleep(900), cout << endl; //calls my "hello" variable function from my variable tab.cpp file
-
-	Sleep(9), cout << "Here's a list of age arrays:" << endl, array_test(), Sleep(9);
-
-	Sleep(9), cout << endl << "Here are your strings" << endl, Strings(), Sleep(9);
-
-	Sleep(9), cout << endl << "Here are your type castings" << endl, Type_Casting(), Sleep(9);
-
-	Sleep(9), cout << endl << "let's do some division" << endl, Division(), Sleep(9);
+	Sleep(900), variable_test(), Sleep(900); //calls my "hello" variable function from my variable tab.cpp file
 
 	cout << endl << "Get ready for the program to end in:" << endl, Sleep(500), cout << "3, ", Sleep(800), cout << "2, ", Sleep(800), cout << "1" << endl, Sleep(800),
 		cout << endl << "Bye, " << variable_login_name, Sleep(400);
-
 
 
 	return(0);
