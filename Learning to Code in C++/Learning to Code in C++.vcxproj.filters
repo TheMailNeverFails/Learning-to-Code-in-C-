@@ -21,26 +21,5 @@
     <ClCompile Include="other.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\Arrays.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Averages chalenge.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Calculation.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Preprocessor_Directives_File.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Strings.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Type Casting.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Type inference with auto test.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
   </ItemGroup>
 </Project>
